@@ -1,0 +1,352 @@
+/*-- Slideshow plugin --*/
+.slideshow_plugin_wraparound{
+	width:99%;
+	margin: 0 auto;
+	padding: 6px 0px 6px 0px;
+	font-size:12px;
+	font-family: Tahoma,Geneva,Kalimati,sans-serif;
+}
+	/*-- Thumbs wraparound div --*/
+	div.thumbs_wraparound{
+		width: 159px;
+		float: left;
+	}
+	/*-- Thumbs table --*/
+	.thumbs_wraparound table{
+		border-collapse: collapse;
+		margin-top: 5px;
+		width:100%;
+	}
+		td.arrows_container{
+			height:26px; 
+			text-align:center;
+			cursor: default;
+		}
+		td.arrows_container, .thumbs_container{
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		/*-- Thumbs images container --*/
+		.thumbs_container{
+			border-right:1px solid #f1f1f1;
+			max-height: 460px;
+			overflow: auto;
+			min-height: 460px;
+		}
+			.thumb_images_container{
+				position: relative;
+				padding: 5px;
+				width: 95px;
+				height: 95px;
+				margin: 3px 0px 0px 5px;
+				border: 1px solid;
+				border-radius: 3px;
+			}
+				.img_thumb{
+					display:block;
+					background-size:cover !important;
+				}
+			.delete_slide, .img_thumb {
+					position: absolute;
+				}
+			.delete_slide {
+				z-index: 10;
+				left: 5px;
+				top: 5px;
+				background-color: black;
+				width: 20px;
+				height: 15px;
+				text-align:center;
+				opacity: 0.5;
+				color:#FF6668;
+			}
+		/*-- buttons no change slides order --*/
+		.arrows_slides, .del_btn{
+			padding: 0em 0.2em 0.1em;
+			width: 25px;
+			font-size: 16px;
+			margin-left: 2px;
+			height: 25px;
+			text-align:center;
+			border:1px solid #f1f1f1;
+		}
+		.arrows_slides:hover, .del_btn:hover{
+			border:1px solid #C6C6C6;
+		}
+		.del_btn{
+			color:red;
+		}
+		.mouseover_image{
+			border-color:#C6C6C6;
+		}
+		.mouseout_image{
+			border-color:#f1f1f1;
+		}
+		.mouseover_delbtn{
+			display: block;
+			cursor: pointer;
+		}
+		.mouseout_delbtn{
+			display: none;
+		}
+		.clicked_img_thumb{
+			background-color:grey;
+		}
+	/*-- END Thumbs wraparound div --*/
+	
+	/*-- Slideshow_info_wraparound div --*/
+	div.slideshow_info_wraparound{
+		margin-left: 175px;
+	}
+		/*-- Tabs --*/
+		.tabs {
+			width:100%;
+			display:inline-block;
+		}
+			/*-- Tab Links --*/
+			ul.tab-links{
+				margin:0;
+				padding:0;
+			}
+			.tab-links:after {
+				display:block;
+				clear:both;
+				content:'';
+			}
+			.tab-links li {
+				margin:0px 5px;
+				float:left;
+				list-style:none;
+			}
+				.tab-links a {
+					padding:9px 15px;
+					display:inline-block;
+					border-radius:3px 3px 0px 0px;
+					background:#fff;
+					font-weight:bold;
+					color:#4c4c4c;
+					transition:all linear 0.15s;
+					text-decoration:none;
+				}
+				.tab-links a:hover {
+					background:#FAFAFA;
+				}
+		 
+			li.active a, li.active a:hover {
+				background:#F1F1F1;
+				color:#4c4c4c;
+			}
+			/*-- Content of Tabs --*/
+			.tab-content {
+				border-radius:3px;
+				border: 1px solid #f1f1f1;
+				height: 480px;
+			}
+				.tab {
+					display:none;
+				}
+				.tab.active {
+					display:block;
+				}
+				/*-- Table image info --*/
+				.tab  table{
+					width: 100%;
+
+				}
+				#tab1 table td{
+					padding: 5px;
+				}
+					#tab1 span, .tr_slideshow_type span, .tr_settings span{
+						color:#4c4c4c;
+						font-size:12px;
+					}
+					.tab input[type="text"] {
+						width: 100%;
+					}
+					.tab textarea{
+						height: 67px;
+						width: 100%;
+						max-height:67px;
+					}
+					#big_image, #slideshow_preview{
+						border:1px solid #f1f1f1;
+						margin: 0 auto;
+						padding: 5px;
+						border-radius: 3px;
+						width: 417px;
+						overflow: hidden;
+						max-height: 341px;
+					}
+					#big_image{height:250px;}
+					td.top_input{
+						border-top: 1px solid #F1F1F1;
+						padding: 5px 0px 5px 0px;
+					}
+					tr.tr_settings table td{
+						max-width:120px;
+						vertical-align: bottom;
+					}
+					tr.tr_settings table input {
+						width:60px;
+					}
+					tr.tr_slideshow_type td, tr.tr_settings td{
+						padding: 5px 5px 0 5px;
+					}
+					tr.tr_settings select{max-width:120px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+				/*-- Table slideshow preview --*/
+	/*-- End Slideshow_info_wraparound div --*/
+	
+	/*-- Submit div --*/
+	div.submit{
+		margin-top: 10px;
+	}
+	div.submit table{
+		width:100%;
+		border-collapse: collapse;
+	}
+	div.submit  td{
+		padding: 0px;
+		width:33%;
+		color: #4c4c4c;
+		font-size: 12px;
+	}
+	span.error{
+		color:red
+	}
+	.slideshowplugin_img{
+		background-position: center center; 
+		background-repeat:no-repeat; 
+		background-size: contain;
+	}
+	/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:250px;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+	font-size:11px;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+
+.nivo-directionNav a{height:30px;width:30px;text-indent:-9999px;position:absolute;top:15%;z-index:90;cursor:pointer;background:url(../images/arrows.png) no-repeat;}
+.nivo-prevNav {
+	left:5px;
+}
+a.nivo-nextNav{right:5px;background-position: -30px 0;}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding-top: 4px;
+	max-height: 87px;
+	overflow: auto;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+.nivo-thumbs-enabled img{
+	border-radius:2px;
+	cursor:pointer;
+	display:inline;
+	margin: 2px 2px 0 0;
+	position: relative;
+	width: 40px;
+}
+.mbox_preview{position:relative;float:left}
+.preview_box{width:100%;height:341px;overflow:auto;}
+.nivo-thumbs-enabled .active{opacity: 0.8;}
+.slideshow2_title {padding: 1px 6px 1px 0px;}
+.slideshow2_title span{font: 11px/15px tahoma;}
+.slideshow2_cap{height:22px !important;}
+.slideshow2_navima{width: 15px !important; height: 15px !important; font-size: 8px !important;margin:0;}
+.slideshow2_thumb_div{width:40px !important; height: 40px !important}
+.slideshow2_ct{margin-left:16%}
+.slideshow2_imgs_navigation div{background-size:contain;}
