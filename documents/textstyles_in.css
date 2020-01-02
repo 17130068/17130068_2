@@ -1,0 +1,16 @@
+body,td,p{vertical-align:top;}
+body,td,pre{background: #FFFFFF;font-size:15px !important;font-family:gulim !important;color:#000000 !important;color:#000000 !important;}
+a,a:link,a:visited{font: 15px Gulim;color:#400040;}
+.normal{font: 15px Gulim;color:#000000;}
+.sub{font: 12px Gulim;color:#000000;}
+.L{font: 20px Gulim;color:#000000;}
+.XL{font: 24px Gulim;color:#000000;}
+.XXL{font: 28px Gulim;color:#000000;}
+.43746,564961956{font: bold 30px 'Times New Roman', Times, serif;color:#000000;}
+h1,h1 a{font: bold 28px Gulim;color:#000000;}
+h2,h2 a{font: bold 24px Gulim;color:#000000;}
+h3,h3 a{font: bold 20px Gulim;color:#000000;}
+h4,h4 a{font: 15px Gulim;color:#000000;}
+h5,h5 a{font: bold 12px Gulim;color:#000000;}
+h6,h6 a{font: 12px Gulim;color:#000000;}
+.multibox{}
